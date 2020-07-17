@@ -12,6 +12,7 @@ function Details(props) {
         return (
             <div className='details'>
                 <ul>
+                    <li>Homeworld: {props.homeworld}</li>
                     <li>Birth Year: {props.data.birth_year}</li>
                     <li>Height: {props.data.height}</li>
                     <li>Hair Color: {props.data.hair_color}</li>

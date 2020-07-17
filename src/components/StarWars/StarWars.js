@@ -8,7 +8,7 @@ import './StarWars.css';
 function StarWars() {
     const [ number, setNumber ] = useState(0);
     const [ data, setData ] = useState(null)
-
+    const [ homeworld, setHomeworld ] = useState(null)
     const [ characters, setCharacter ] = useState([])
 
     async function handleSubmit(e) {
@@ -19,7 +19,13 @@ function StarWars() {
             const res = await fetch(url)
             const json = await res.json()
 
-            setData(json)
+            await setData(json)
+            
+            const hw_res = await fetch(json.homeworld)
+            const hw_json = await hw_res.json()
+
+            setHomeworld(hw_json.name)
+            console.log(hw_json.name)
         } catch(err) {
             console.log(err)
         }
@@ -44,14 +50,14 @@ function StarWars() {
                 />
             </form>
             <Title name={data ? data.name : 'No character chosen'} />
-            <Details data={data ? data : null } />
+            <Details data={data ? data : null } homeworld={homeworld} />
 
             {data ? <h1>Saved</h1> : null}
             { characters.map( (char, i) => {
                 return (
                     <div>
                         <Title name={char.name} key={char.name} />
-                        <Details data={data} key={char.name+i}/>
+                        <Details data={data} key={char.name+i} homeworld={homeworld} />
                     </div>
                 )
             }) 
