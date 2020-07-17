@@ -9,12 +9,13 @@ function StarWars() {
     const [ number, setNumber ] = useState(0);
     const [ data, setData ] = useState(null)
 
+    const [ characters, setCharacter ] = useState([])
+
     async function handleSubmit(e) {
         e.preventDefault()
         const url = `https://swapi.dev/api/people/${number}`
 
         try {
-            console.log({url}, {number})
             const res = await fetch(url)
             const json = await res.json()
 
@@ -23,8 +24,6 @@ function StarWars() {
             console.log(err)
         }
     }
-
-
 
     return (
         <div>
@@ -35,11 +34,28 @@ function StarWars() {
                     placeholder='enter number'
                     value={number} 
                     onChange={(e) => setNumber(e.target.value) }/>
-                <button type='submit'>Search</button>
+                <br />
+                <button type='submit'>Load Character</button>
+
+                <input 
+                    type='button' 
+                    value='Save Character' 
+                    onClick={ () =>  setCharacter( characters => [ ...characters, data])}
+                />
             </form>
             <Title name={data ? data.name : 'No character chosen'} />
-
             <Details data={data ? data : null } />
+
+            {data ? <h1>Saved</h1> : null}
+            { characters.map( (char, i) => {
+                return (
+                    <div>
+                        <Title name={char.name} key={char.name} />
+                        <Details data={data} key={char.name+i}/>
+                    </div>
+                )
+            }) 
+            }
         </div>
     )
 

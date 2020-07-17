@@ -1,7 +1,8 @@
 import React from 'react'
 
 function Details(props) {
-
+    // const { data.birth_year, height, hair_color, eye_color } = props
+    // console.log(props)
     if (!props.data) {
         return (
             <div>
@@ -11,10 +12,10 @@ function Details(props) {
         return (
             <div className='details'>
                 <ul>
-                    <li>Birth Year: {props.birth_year}</li>
-                    <li>Height: {props.height}</li>
-                    <li>Hair Color: {props.hair_color}</li>
-                    <li>Eye Color: {props.eye_color}</li>
+                    <li>Birth Year: {props.data.birth_year}</li>
+                    <li>Height: {props.data.height}</li>
+                    <li>Hair Color: {props.data.hair_color}</li>
+                    <li>Eye Color: {props.data.eye_color}</li>
                 </ul>
             </div>
         )
