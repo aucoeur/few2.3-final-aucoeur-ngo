@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import Title from '../Title/Title'
+import Title from '../Title/Title';
+import Details from '../Details/Details';
 
 import './StarWars.css';
 
@@ -23,7 +24,7 @@ function StarWars() {
         }
     }
 
-    // const name = handleSubmit()
+
 
     return (
         <div>
@@ -37,6 +38,8 @@ function StarWars() {
                 <button type='submit'>Search</button>
             </form>
             <Title name={data ? data.name : 'No character chosen'} />
+
+            <Details data={data ? data : null } />
         </div>
     )
 
