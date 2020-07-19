@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/few2.3-final-aucoeur-ngo/static/css/main.bdf48828.chunk.css",
+    "main.js": "/few2.3-final-aucoeur-ngo/static/js/main.d7d7afc9.chunk.js",
+    "main.js.map": "/few2.3-final-aucoeur-ngo/static/js/main.d7d7afc9.chunk.js.map",
+    "runtime-main.js": "/few2.3-final-aucoeur-ngo/static/js/runtime-main.67886053.js",
+    "runtime-main.js.map": "/few2.3-final-aucoeur-ngo/static/js/runtime-main.67886053.js.map",
+    "static/js/2.11360524.chunk.js": "/few2.3-final-aucoeur-ngo/static/js/2.11360524.chunk.js",
+    "static/js/2.11360524.chunk.js.map": "/few2.3-final-aucoeur-ngo/static/js/2.11360524.chunk.js.map",
+    "index.html": "/few2.3-final-aucoeur-ngo/index.html",
+    "precache-manifest.1b10e9a79444f46917220dc7a3106d6a.js": "/few2.3-final-aucoeur-ngo/precache-manifest.1b10e9a79444f46917220dc7a3106d6a.js",
+    "service-worker.js": "/few2.3-final-aucoeur-ngo/service-worker.js",
+    "static/css/main.bdf48828.chunk.css.map": "/few2.3-final-aucoeur-ngo/static/css/main.bdf48828.chunk.css.map",
+    "static/js/2.11360524.chunk.js.LICENSE.txt": "/few2.3-final-aucoeur-ngo/static/js/2.11360524.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67886053.js",
+    "static/js/2.11360524.chunk.js",
+    "static/css/main.bdf48828.chunk.css",
+    "static/js/main.d7d7afc9.chunk.js"
+  ]
+}
